@@ -1,0 +1,41 @@
+.container_profil {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--main-color);
+    h2 {
+        font-size: 3rem;
+        @include s {
+            font-size: 1.7rem;
+        }
+    }
+    img {
+        width: 10vh;
+    }
+    .center_profil{
+        position: absolute;
+        top: 50%;
+        width: 90%;
+        text-align: center;
+        padding: 0 5%;
+        font-family: Montreal-medium;
+        mix-blend-mode: difference;
+    }
+    .container_profil_bottom{
+        height: 5vh;
+        width: 90%;
+        background-color: var(--background-color);
+        position: absolute;
+        top: 95%;
+        display: inline-flex;
+        align-items: flex-end;
+        padding: 0 5%;
+        
+        ul{
+            color: var(--main-color);
+            margin-right: 1rem;
+        }
+    }
+}
