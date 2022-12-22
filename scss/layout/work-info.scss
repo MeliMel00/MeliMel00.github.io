@@ -5,8 +5,11 @@
 .desc-project{
     margin-top: 5rem;
     background-color: var(--background-color);
-    width: 90%;
-    padding: 5rem 5% 5rem 5%;
+    max-width: 1440px;
+    margin: 5rem auto;
+    @include s {
+        margin: 5rem 25px;
+    }
     h1{
         text-align: center;
         font-size: 2.5rem;

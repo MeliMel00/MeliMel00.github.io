@@ -1,0 +1,73 @@
+
+
+.section_form{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    height: calc(100vh - 280px);
+    margin-top: 10rem;
+    margin-right: auto;
+    margin-left: auto;
+
+    h1{
+        text-align: center;
+        color: white;
+        font-size: 2rem;
+        padding-bottom: 2rem;
+    }
+    
+    .div_form_img{
+        display: inline-flex;
+        width: fit-content;
+        margin-right: auto;
+        margin-left: auto;
+        gap: 4rem;
+
+        .form_image{
+            width: calc(0.752*400px);
+            height: 400px;
+            background-image: url(./image/ski.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            border-radius: 0.5rem;
+            @include xs {
+                display: none;
+            }
+        }
+        .contact_form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .submit{
+                margin-top: 2rem;
+                background-color: white;
+                color: black;
+                border-radius: 0.25rem;
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 1.25rem;
+
+                
+            }
+            input{
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                // margin-top: 1rem;
+                padding: 0.5rem;
+                background-color: transparent;
+                border-bottom: 1px solid white !important;
+                border: 0px;
+                outline: none;
+                font-size: 1.25rem;
+                @include s {
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+}

@@ -2,9 +2,11 @@
 .section-gallery{
     display: flex;
     flex-direction: column;
-    width: 90%;
-    padding: 0 5%;
+    max-width: 1440px;
     background-color: var(--background-color);
+    @include s{
+        margin: 0 25px;
+    }
     .title-sect-project{
         color: var(--main-color);
         padding-bottom: 5rem;

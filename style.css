@@ -18,8 +18,13 @@
   display: flex;
   flex-direction: column;
   background-color: var(--background-color);
-  width: 90%;
-  padding: 0 5%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .about_section {
+    margin: 0 25px;
+  }
 }
 .about_section .about_title {
   display: flex;
@@ -189,13 +194,14 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 90%;
-  padding: 0 5%;
-  gap: 10%;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: space-between;
 }
 @media screen and (max-width: 1024px) {
   .how-i-am {
     gap: 0;
+    margin: 0 25px;
   }
 }
 .how-i-am .title-sect-about {
@@ -204,10 +210,11 @@
 .how-i-am .about_paragraph {
   color: var(--main-color);
   width: 45%;
+  max-width: 500px;
 }
 @media screen and (max-width: 1024px) {
   .how-i-am .about_paragraph {
-    width: 100%;
+    width: fit-content;
   }
 }
 .how-i-am .about_paragraph p {
@@ -225,13 +232,13 @@
 }
 .how-i-am .about_paragraph span {
   font-size: 1.2rem;
-  color: blue;
+  color: rgb(0, 0, 255);
 }
 .how-i-am .my-skills {
   display: inline-flex;
   justify-content: space-between;
   gap: 3rem;
-  width: 45%;
+  width: max-content;
 }
 @media screen and (max-width: 800px) {
   .how-i-am .my-skills {
@@ -247,7 +254,6 @@
   display: flex;
   flex-direction: column;
   height: fit-content;
-  max-width: fit-content;
 }
 .how-i-am .my-skills ul h2, .how-i-am .my-skills ul h3 {
   color: var(--background-color) !important;
@@ -258,7 +264,7 @@
 }
 .how-i-am .my-skills li {
   list-style: none;
-  box-shadow: 0px 0px 8px -3px black;
+  box-shadow: 0px 0px 8px -3px rgb(0, 0, 0);
   border-radius: 2rem;
 }
 .how-i-am .my-skills .skill-before {
@@ -270,7 +276,7 @@
   position: relative;
   top: -1rem;
   height: 1rem;
-  background-color: #3d3d3d;
+  background-color: rgb(61, 61, 61);
   width: 0%;
 }
 :root {
@@ -323,6 +329,10 @@ h3 {
     --black-width: 8vw ;
   }
 }
+body {
+  background-color: var(--background-color);
+}
+
 header {
   height: auto;
   width: 100%;
@@ -464,9 +474,13 @@ footer .link_profil_footer a {
 .section-gallery {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding: 0 5%;
+  max-width: 1440px;
   background-color: var(--background-color);
+}
+@media screen and (max-width: 1024px) {
+  .section-gallery {
+    margin: 0 25px;
+  }
 }
 .section-gallery .title-sect-project {
   color: var(--main-color);
@@ -522,8 +536,13 @@ footer .link_profil_footer a {
 .desc-project {
   margin-top: 5rem;
   background-color: var(--background-color);
-  width: 90%;
-  padding: 5rem 5% 5rem 5%;
+  max-width: 1440px;
+  margin: 5rem auto;
+}
+@media screen and (max-width: 1024px) {
+  .desc-project {
+    margin: 5rem 25px;
+  }
 }
 .desc-project h1 {
   text-align: center;
@@ -590,6 +609,75 @@ footer .link_profil_footer a {
 @media screen and (max-width: 800px) {
   .conclu-project .link-project {
     width: 60%;
+  }
+}
+
+.section_form {
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  height: calc(100vh - 280px);
+  margin-top: 10rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+.section_form h1 {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+.section_form .div_form_img {
+  display: inline-flex;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 4rem;
+}
+.section_form .div_form_img .form_image {
+  width: 300.8px;
+  height: 400px;
+  background-image: url(./image/ski.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 800px) {
+  .section_form .div_form_img .form_image {
+    display: none;
+  }
+}
+.section_form .div_form_img .contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section_form .div_form_img .contact_form .submit {
+  margin-top: 2rem;
+  background-color: white;
+  color: black;
+  border-radius: 0.25rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.25rem;
+}
+.section_form .div_form_img .contact_form input {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-bottom: 1px solid white !important;
+  border: 0px;
+  outline: none;
+  font-size: 1.25rem;
+}
+@media screen and (max-width: 1024px) {
+  .section_form .div_form_img .contact_form input {
+    width: 100%;
   }
 }
 

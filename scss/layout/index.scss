@@ -16,9 +16,11 @@
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);
-    width: 90%;
-    padding: 0 5%;
-    
+    max-width: 1440px;
+    margin: 0 auto;
+    @include s{
+        margin: 0 25px;
+    }
     .about_title{
         display: flex;
         flex-direction: column;
@@ -177,11 +179,13 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 90%;
-    padding: 0 5%;
-    gap: 10%;
+    max-width: 1440px;
+    margin: 0 auto;
+    // gap: 10%;
+    justify-content: space-between;
     @include s{
         gap: 0;
+        margin: 0 25px;
     }
     .title-sect-about{
         width: 100%;
@@ -189,8 +193,9 @@
     .about_paragraph{
         color: var(--main-color);
         width: 45%;
+        max-width: 500px;
         @include s {
-            width: 100%;
+            width: fit-content;
         }
         p{
             padding-top: 2rem;
@@ -212,7 +217,7 @@
         display: inline-flex;
         justify-content: space-between;
         gap: 3rem;
-        width: 45%;
+        width: max-content;
         @include xs {
             flex-direction: column;
             width: 100%;
@@ -225,7 +230,7 @@
             display: flex;
             flex-direction: column;
             height: fit-content;
-            max-width: fit-content;
+            // max-width: fit-content;
             h2,h3{
                 color: var(--background-color) !important;
             }
